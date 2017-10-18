@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../javascript/scripts/turn.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/dist/csshake.min.css">
+
+
+<link href="../javascript/EaselJS/_assets/css/examples.css" rel="stylesheet" type="text/css"/>
+<script src="../javascript/EaselJS/_assets/js/examples.js"></script>
+
+<script src="../javascript/EaselJS/lib/easeljs-NEXT.combined.js"></script>
+
+<style type="text/css">
+body{
+	background:#ccc;
+}
+#magazine{
+	width:1152px;
+	height:700px;
+	font-family: 'Playfair Display', serif;
+}
+#magazine .turn-page{
+	background-color:#ccc;
+	background-size:100% 100%;
+}
+h1, h5, h2{
+	text-align: center;
+
+}
+#covergrid {
+  display: grid;
+  grid-template-rows: 50vh repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+
+  margin: 0;
+}
+#covergrid > div {
+  font-size: 4vw;
+  padding: 10px;
+}
+#covergrid > div:nth-child(1) {
+  grid-column: span 4;
+  }
+#covergrid > div:nth-child(2) {
+  grid-column: span 4;
+  }
+
+#img1{
+	width: 500px;
+	margin-top: 15px;
+	margin-left: 35px;
+	border-width: thin;
+	border-style: solid;
+}
+#vid1{
+	width: 400px;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+#quizbutton{
+	margin-top: 500px;
+	margin-left: 450px;
+
+}
+
+
+</style>
+</head>
+<body onload="init();">
+
+<div id="magazine">
+	<div id="p1" style="background-image:url(../media/images/pages/02.jpg);">
+		<div id="covergrid">
+			<div class="shake-vertical"><h1>Cuba Countdown</h1></div>
+			<div><h5>Ein E-Learning Projekt der 5AI &uuml;ber die Kubakrise</h5></div>
+		</div>
+	</div>
+
+	<div id="p2" style="background-image:url(../media/images/pages/02.jpg);">
+		<img id="img1" src="../media/images/karte.jpg">
+		<h2>Karte Kuba</h2>
+	</div>
+	<div id="p3" style="background-image:url(../media/images/pages/02.jpg);">
+		<video id="vid1" src="../media/video/testvideo.m4v" controls>
+	Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+	Dieser Film zeigt eine Demonstration des video-Elements.
+	Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
+</video>
+
+<audio id="audio_with_controls" controls src="https://wiki.selfhtml.org/local/Europahymne.mp3" type="audio/mp3">
+       Ihr Browser kann dieses Tondokument nicht wiedergeben.<br>
+       Es enthält eine Aufführung der Europahymne.
+       Sie können es unter
+       <a href="https://wiki.selfhtml.org/local/Europahymne.mp3">diesem Link</a>
+       abrufen.
+</audio>
+
+	</div>
+	<div id="p4" style="background-image:url(../media/images/pages/02.jpg);">
+		<canvas id="testCanvas" width="550" height="400"></canvas>
+	</div>
+	<div id="p5" style="background-image:url(../media/images/pages/02.jpg);">
+			<button type="button" class="btn btn-info" id="quizbutton"><a href="quiz.html" class="shake" >Zum Quiz</a></button>
+
+	</div>
+	<div id="p6" style="background-image:url(../media/images/pages/02.jpg);"></div>
+</div>
+
+
+<script type="text/javascript">
+
+	$(window).ready(function() {
+		$('#magazine').turn({
+							display: 'double',
+							acceleration: true,
+							gradients: !$.isTouch,
+							elevation:50,
+							when: {
+								turned: function(e, page) {
+									/*console.log('Current view: ', $(this).turn('view'));*/
+								}
+							}
+						});
+	});
+
+
+	$(window).bind('keydown', function(e){
+
+		if (e.keyCode==37)
+			$('#magazine').turn('previous');
+		else if (e.keyCode==39)
+			$('#magazine').turn('next');
+
+	});
+
+</script>
+<script id="editable">
+	var stage;
+	var isDrawing;
+	var drawingCanvas;
+	var oldPt;
+	var oldMidPt;
+	var displayCanvas;
+	var image;
+	var bitmap;
+	var maskFilter;
+	var cursor;
+	var text;
+	var blur;
+
+	function init() {
+		examples.showDistractor();
+
+		image = new Image();
+		image.onload = handleComplete;
+		image.src = "../media/images/karte.jpg";
+
+		stage = new createjs.Stage("testCanvas");
+		text = new createjs.Text("Loading...", "20px Arial", "#FFF");
+		text.set({x: stage.canvas.width / 2, y: stage.canvas.height - 40});
+		text.textAlign = "center";
+	}
+
+	function handleComplete() {
+		examples.hideDistractor();
+		createjs.Touch.enable(stage);
+		stage.enableMouseOver();
+
+		stage.addEventListener("stagemousedown", handleMouseDown);
+		stage.addEventListener("stagemouseup", handleMouseUp);
+		stage.addEventListener("stagemousemove", handleMouseMove);
+		drawingCanvas = new createjs.Shape();
+		bitmap = new createjs.Bitmap(image);
+
+		blur = new createjs.Bitmap(image);
+		blur.filters = [new createjs.BlurFilter(24, 24, 2), new createjs.ColorMatrixFilter(new createjs.ColorMatrix(60))];
+		blur.cache(0, 0, 960, 400);
+
+		text.text = "Click and Drag to Reveal the Image.";
+
+		stage.addChild(blur, text, bitmap);
+		updateCacheImage(false);
+
+		cursor = new createjs.Shape(new createjs.Graphics().beginFill("#FFFFFF").drawCircle(0, 0, 25));
+		cursor.cursor = "pointer";
+
+		stage.addChild(cursor);
+	}
+
+	function handleMouseDown(event) {
+		oldPt = new createjs.Point(stage.mouseX, stage.mouseY);
+		oldMidPt = oldPt;
+		isDrawing = true;
+	}
+
+	function handleMouseMove(event) {
+		cursor.x = stage.mouseX;
+		cursor.y = stage.mouseY;
+
+		if (!isDrawing) {
+			stage.update();
+			return;
+		}
+
+		var midPoint = new createjs.Point(oldPt.x + stage.mouseX >> 1, oldPt.y + stage.mouseY >> 1);
+
+		drawingCanvas.graphics.setStrokeStyle(40, "round", "round")
+				.beginStroke("rgba(0,0,0,0.2)")
+				.moveTo(midPoint.x, midPoint.y)
+				.curveTo(oldPt.x, oldPt.y, oldMidPt.x, oldMidPt.y);
+
+		oldPt.x = stage.mouseX;
+		oldPt.y = stage.mouseY;
+
+		oldMidPt.x = midPoint.x;
+		oldMidPt.y = midPoint.y;
+
+		updateCacheImage(true);
+	}
+
+	function handleMouseUp(event) {
+		updateCacheImage(true);
+		isDrawing = false;
+	}
+
+	function updateCacheImage(update) {
+		if (update) {
+			drawingCanvas.updateCache();
+		} else {
+			drawingCanvas.cache(0, 0, image.width, image.height);
+		}
+
+		maskFilter = new createjs.AlphaMaskFilter(drawingCanvas.cacheCanvas);
+
+		bitmap.filters = [maskFilter];
+		if (update) {
+			bitmap.updateCache(0, 0, image.width, image.height);
+		} else {
+			bitmap.cache(0, 0, image.width, image.height);
+		}
+
+		stage.update();
+	}
+</script>
+
+</body>
+</html>
