@@ -1,24 +1,20 @@
-	/* Remove the navbar's default margin-bottom and rounded borders */
+    body {
+      background-image: url("../media/images/radio.jpg");
+    }
+
+/* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
 
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      position:fixed;
-      width:100%;
-      bottom:0px;
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-
+/* Add a gray background color and some padding to the footer */
     #infobutton {
       width:101.45px;
       height:34px;
       position:relative;
       left:21%;
-      top:30px;
+      top:290px;
     }
 
     #quizbutton {
@@ -26,26 +22,37 @@
       height:34px;
       position:relative;
       left:70%;
-      bottom:10px;
+      top:250px;
     }
 
     header {
-      background-color: white;
-      position:relative;
-      bottom:50px;
+      text-align: center;
     }
 
     .shake {
-      position: relative;
-      top:15px;
-      z-index:100;
+      color:black;
+      font-size:50pt;
+      position:relative;
+      text-align:center;
     }
 
-    .jumbotron {
-      background-color: white;
+    a {
+      color:white;
+    }
+
+    a:hover {
+      color:black;
     }
 
     td {
       padding-right:150px;
       padding-bottom:10px;
+    }
+
+    footer {
+      background-color:#47525E;
+      position:fixed;
+      width:100%;
+      bottom:0px;
+      padding: 25px;
     }
