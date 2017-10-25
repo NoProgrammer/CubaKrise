@@ -9,3 +9,15 @@
       background-color: #f2f2f2;
       padding: 25px;
     }
+
+    #infobutton {
+      position:relative;
+      right:20%;
+      top:30px;
+    }
+
+    #quizbutton {
+      position:relative;
+      left:20%;
+      bottom:10px;
+    }
