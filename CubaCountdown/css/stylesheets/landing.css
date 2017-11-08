@@ -25,12 +25,13 @@ height: 100px;
 }
 /* Add a gray background color and some padding to the footer */
 #infobutton {
+  position:relative;
   left:-300px;
   top:250px;
-  z-index:100;
 }
 
 #quizbutton {
+  position:relative;
   left:300px;
   top:140px;
 }
