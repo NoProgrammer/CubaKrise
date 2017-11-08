@@ -21,17 +21,18 @@ font-size: 16px;
 margin: 4px 2px;
 cursor: pointer;
 width: 200px;
-height: 200px;
+height: 100px;
 }
 /* Add a gray background color and some padding to the footer */
 #infobutton {
   left:-300px;
   top:250px;
+  z-index:100;
 }
 
 #quizbutton {
   left:300px;
-  top:50px;
+  top:140px;
 }
 
 header {
@@ -53,11 +54,6 @@ a:hover {
   color:black;
 }
 
-td {
-  padding-right:150px;
-  padding-bottom:10px;
-}
-
 footer {
   color:white;
   background-color:#47525E;
@@ -65,4 +61,10 @@ footer {
   width:100%;
   bottom:0px;
   padding: 15px;
+}
+
+@media screen and (max-width:500px) {
+  body {
+
+  }
 }
