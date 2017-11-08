@@ -1,5 +1,5 @@
     body {
-      background-image: url("../media/images/radio.jpg");
+      
     }
 
 /* Remove the navbar's default margin-bottom and rounded borders */
@@ -13,7 +13,7 @@
       width:101.45px;
       height:34px;
       position:relative;
-      left:21%;
+      left:20%;
       top:290px;
     }
 
@@ -27,6 +27,7 @@
 
     header {
       text-align: center;
+      white-space: nowrap;
     }
 
     .shake {
@@ -42,6 +43,7 @@
 
     a:hover {
       color:black;
+      text-decoration: none;
     }
 
     td {
@@ -51,8 +53,23 @@
 
     footer {
       background-color:#47525E;
-      position:fixed;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
       width:100%;
-      bottom:0px;
       padding: 25px;
+    }
+
+    @media screen and (max-width: 767px) {
+      #infobutton {
+        left:40%;
+      }
+
+      #quizbutton {
+        left:40%;
+
+        
+
+      }
     }
