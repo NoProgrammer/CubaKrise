@@ -1,0 +1,75 @@
+    body {
+      
+    }
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+/* Add a gray background color and some padding to the footer */
+    #infobutton {
+      width:101.45px;
+      height:34px;
+      position:relative;
+      left:20%;
+      top:290px;
+    }
+
+    #quizbutton {
+      width:101.45px;
+      height:34px;
+      position:relative;
+      left:70%;
+      top:250px;
+    }
+
+    header {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .shake {
+      color:black;
+      font-size:50pt;
+      position:relative;
+      text-align:center;
+    }
+
+    a {
+      color:white;
+    }
+
+    a:hover {
+      color:black;
+      text-decoration: none;
+    }
+
+    td {
+      padding-right:150px;
+      padding-bottom:10px;
+    }
+
+    footer {
+      background-color:#47525E;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width:100%;
+      padding: 25px;
+    }
+
+    @media screen and (max-width: 767px) {
+      #infobutton {
+        left:40%;
+      }
+
+      #quizbutton {
+        left:40%;
+
+        
+
+      }
+    }
