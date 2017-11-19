@@ -1,6 +1,6 @@
 body {
-  background-image: url("../../media/images/landing_bg.jpg");
-  background-size: 100%;
+  background:url("../../media/images/landing_bg.jpg") 100% 0% no-repeat;
+  background-size:;
 }
 
 /* Remove the navbar's default margin-bottom and rounded borders */
@@ -24,47 +24,50 @@ body {
   height: 100px;
 }
 /* Add a gray background color and some padding to the footer */
-#infobutton {
-  position:relative;
-  left:-300px;
-  top:250px;
-}
-
-#quizbutton {
-  position:relative;
-  left:300px;
-  top:140px;
-}
 
 header {
   text-align: center;
-}
-
-.shake {
+  white-space:nowrap;
   color:black;
-  font-size:50pt;
-  position:relative;
   text-align:center;
 }
 
-a {
-  color:white;
+.shake { font-weight:bold; font-size:50px; }
+
+section {
+  margin-left:20%;
+  margin-right:20%;
+  display:flex;
+  justify-content: space-between;
 }
 
-a:hover {
-  color:black;
+.button {
+  font-size:20px;
+  width:220px;
+  font-family:Verdana;
+  position:relative;
+  top:200px;
+  background-color: rgba(71, 82, 94, 0.6);
+}
+
+a {
+  font-weight:bold;
+  color:white;
 }
 
 footer {
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
   color:white;
   background-color:#47525E;
-  position:fixed;
-  width:100%;
-  bottom:0px;
   padding: 15px;
 }
 
-@media screen and (max-width:500px) {
-  body {
-  }
+@media screen and (min-width:1285px) { .button { top:350px; } }
+
+@media screen and (max-width:745px) {
+  section { flex-flow: row wrap; justify-content:center; }
+  .button2 {float:left;}
 }
