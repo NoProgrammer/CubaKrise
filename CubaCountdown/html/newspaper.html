@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<meta charset="utf-8">
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../javascript/scripts/turn.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/dist/csshake.min.css">
@@ -14,6 +15,21 @@
 <style type="text/css">
 body{
 	background:#ccc;
+}
+
+.article1 {
+	float:left;
+	padding-left:10%;
+	padding-right:20px;
+	width:40%;
+	border-right:1px solid;
+}
+
+.article2{
+	float:right;
+	padding-right:10%;
+	padding-left:20px;
+	width:30%;
 }
 #magazine{
 	width:1152px;
@@ -63,7 +79,10 @@ h1, h5, h2{
 #quizbutton{
 	margin-top: 500px;
 	margin-left: 450px;
+}
 
+img {
+	width:80%;
 }
 
 
@@ -75,13 +94,20 @@ h1, h5, h2{
 	<div id="p1" style="background-image:url(../media/images/pages/02.jpg);">
 		<div id="covergrid">
 			<div class="shake-vertical"><h1>Cuba Countdown</h1></div>
-			<div><h5>Ein E-Learning Projekt der 5AI &uuml;ber die Kubakrise</h5></div>
+			<div><h5>Ein E-Learning Projekt der 5AI über die Kubakrise</h5></div>
 		</div>
 	</div>
 
 	<div id="p2" style="background-image:url(../media/images/pages/02.jpg);">
-		<img id="img1" src="../media/images/karte.jpg">
-		<h2>Karte Kuba</h2>
+		<div class="article1">
+			<h2>Article 1</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<img src="../media/images/before/i_newspaper_beach.jpg">
+		</div>
+		<div class="article2">
+			<h2>Article 2</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+		</div>
 	</div>
 	<div id="p3" style="background-image:url(../media/images/pages/02.jpg);">
 		<video id="vid1" src="../media/video/testvideo.m4v" controls>
