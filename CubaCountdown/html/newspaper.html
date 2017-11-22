@@ -19,18 +19,29 @@ body{
 
 .article1 {
 	float:left;
-	padding-left:10%;
-	padding-right:20px;
-	width:40%;
-	border-right:1px solid;
+	padding-left:40px;
+	padding-right:40px;
+	width:35%;
+	/*border-right:1px solid;*/
+	height:100%;
 }
 
-.article2{
+.article2 {
 	float:right;
-	padding-right:10%;
+	padding-right:20px;
 	padding-left:20px;
-	width:30%;
+	width:43.9%;
 }
+
+.article3 {
+	/*border-top:1px solid;
+	border-bottom:1px solid;*/
+	float:right;
+	padding-right:20px;
+	padding-left:20px;
+	width:43.9%;
+}
+
 #magazine{
 	width:1152px;
 	height:700px;
@@ -77,12 +88,16 @@ h1, h5, h2{
 }
 
 #quizbutton{
-	margin-top: 500px;
-	margin-left: 450px;
+	margin-top:500px;
+	margin-left:450px;
 }
 
 img {
-	width:80%;
+	width:100%;
+}
+
+audio {
+	opacity: 0.6;
 }
 
 
@@ -106,23 +121,43 @@ img {
 		</div>
 		<div class="article2">
 			<h2>Article 2</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+		</div>
+		<div class="article3">
+			<h2>Article 3</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 		</div>
 	</div>
 	<div id="p3" style="background-image:url(../media/images/pages/02.jpg);">
-		<video id="vid1" src="../media/video/testvideo.m4v" controls>
-	Ihr Browser kann dieses Video nicht wiedergeben.<br/>
-	Dieser Film zeigt eine Demonstration des video-Elements.
-	Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
-</video>
+	<!--
+	<video id="vid1" src="../media/video/testvideo.m4v" controls>
+		Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+		Dieser Film zeigt eine Demonstration des video-Elements.
+		Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
+	</video>
+	-->
+	<div class="article1">
+			<h2>Article 4</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
 
-<audio id="audio_with_controls" controls src="https://wiki.selfhtml.org/local/Europahymne.mp3" type="audio/mp3">
-       Ihr Browser kann dieses Tondokument nicht wiedergeben.<br>
-       Es enthält eine Aufführung der Europahymne.
-       Sie können es unter
-       <a href="https://wiki.selfhtml.org/local/Europahymne.mp3">diesem Link</a>
-       abrufen.
-</audio>
+		</div>
+		<div class="article2">
+			<h2>Article 5</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+		</div>
+		<div class="article3">
+			<h2>Article 6</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<audio id="audio_with_controls" controls src="https://wiki.selfhtml.org/local/Europahymne.mp3" type="audio/mp3">
+		       Ihr Browser kann dieses Tondokument nicht wiedergeben.<br>
+		       Es enthält eine Aufführung der Europahymne.
+		       Sie können es unter
+		       <a href="https://wiki.selfhtml.org/local/Europahymne.mp3">diesem Link</a>
+		       abrufen.
+			</audio>
+		</div>
+
+	
 
 	</div>
 	<div id="p4" style="background-image:url(../media/images/pages/02.jpg);">
@@ -143,7 +178,7 @@ img {
 							display: 'double',
 							acceleration: true,
 							gradients: !$.isTouch,
-							elevation:50,
+							elevation:0,
 							when: {
 								turned: function(e, page) {
 									/*console.log('Current view: ', $(this).turn('view'));*/
