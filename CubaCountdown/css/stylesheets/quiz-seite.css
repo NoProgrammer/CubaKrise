@@ -1,0 +1,36 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+
+
+
+.main {
+	background-color: grey;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.logo {
+	width: 100%;
+}
+
+.side {
+	background-color: #d1d2d3;
+	height: 100%;
+}
+
+.content {
+	height: 100%;
+}
+
+
+
+
+#wrapper {
+	height: 100%;
+}
