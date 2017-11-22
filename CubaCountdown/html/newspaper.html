@@ -22,7 +22,9 @@ body{
 	padding-left:40px;
 	padding-right:40px;
 	width:35%;
-	/*border-right:1px solid;*/
+	/*
+	border-right:1px solid;
+	*/
 	
 }
 
@@ -34,8 +36,10 @@ body{
 }
 
 .article3 {
-	/*border-top:1px solid;
-	border-bottom:1px solid;*/
+	/*
+	border-top:1px solid;
+	border-bottom:1px solid;
+	*/
 	float:right;
 	padding-right:20px;
 	padding-left:20px;
@@ -51,10 +55,21 @@ body{
 	background-color:#ccc;
 	background-size:100% 100%;
 }
-h1, h5, h2{
+h1, h5{
 	text-align: center;
 
 }
+
+p {
+	position:relative;
+	bottom:10px;
+}
+
+a {
+	color:white;
+	text-decoration: none;
+}
+
 #covergrid {
   display: grid;
   grid-template-rows: 50vh repeat(4, 1fr);
@@ -88,8 +103,24 @@ h1, h5, h2{
 }
 
 #quizbutton{
-	margin-top:500px;
-	margin-left:450px;
+	position:relative;
+	top:300px;
+	float:right;
+	margin-right:40%;
+	width: 100px;
+	height: 50px;
+	
+	
+	font-size: 14px;
+	font-weight:bold;
+
+	color: white;
+	  
+	  
+	border: none;
+
+	background-color: #555555;
+	background-color: rgba(71, 82, 94, 0.6);
 }
 
 img {
@@ -181,7 +212,9 @@ audio {
 	</div>
 
 	<div id="p5" style="background-image:url(../media/images/pages/02.jpg);">
-			<button type="button" class="btn btn-info" id="quizbutton"><a href="quiz.html" class="shake" >Zum Quiz</a></button>
+		<button type="button" class="btn btn-info" id="quizbutton">
+			<a href="quiz.html" class="shake" >Zum Quiz</a>
+		</button>
 
 	</div>
 	<div id="p6" style="background-image:url(../media/images/pages/02.jpg);"></div>
