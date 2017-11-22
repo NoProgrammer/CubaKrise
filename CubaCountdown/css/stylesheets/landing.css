@@ -1,6 +1,5 @@
 body {
   background:url("../../media/images/landing_bg.jpg") 100% 0% no-repeat;
-  background-size:;
 }
 
 .button {
@@ -59,5 +58,6 @@ footer {
 
 @media screen and (max-width:745px) {
   section { flex-flow: row wrap; justify-content:center; }
+  .button { position:relative; top:150px;  }
   .button2 {float:left;}
 }
