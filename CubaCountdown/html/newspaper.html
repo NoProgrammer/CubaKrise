@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../javascript/scripts/turn.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/dist/csshake.min.css">
 
 
 <link href="../javascript/EaselJS/_assets/css/examples.css" rel="stylesheet" type="text/css"/>
@@ -20,11 +19,14 @@ body{
 .article1 {
 	float:left;
 	padding-left:40px;
-	padding-right:40px;
+	
 	width:35%;
-	/*
+	
+	/* 
 	border-right:1px solid;
+	padding-right:40px;
 	*/
+	
 
 }
 
@@ -44,6 +46,11 @@ body{
 	padding-right:20px;
 	padding-left:20px;
 	width:43.9%;
+}
+
+.above_text {
+	position:relative;
+	top:10px;
 }
 
 #magazine{
@@ -88,6 +95,8 @@ a {
 #covergrid > div:nth-child(2) {
   grid-column: span 4;
   }
+  
+
 
 #img1{
 	width: 500px;
@@ -131,12 +140,16 @@ audio {
 	opacity: 0.6;
 }
 
+.head_through {
+	text-align:center;
+}
+
 
 </style>
 </head>
-<body onload="init();">
+<body onload="init(); run();">
 
-<div id="magazine">
+<div id="magazine" onload="">
 	<div id="p1" style="background-image:url(../media/images/pages/03.jpeg);">
 		<div id="covergrid">
 			<div class="shake-vertical"><h1>Cuba Countdown</h1></div>
@@ -144,21 +157,27 @@ audio {
 		</div>
 	</div>
 
-		<div id="p2" style="background-image:url(../media/images/pages/03.jpeg);">
+	<!-- PAGE 2 -->
+	<div id="p2" style="background-image:url(../media/images/pages/03.jpeg);">
 		<div class="article1">
-			<h2>Article 1</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<img src="../media/images/before/i_newspaper_beach.jpg">
+			<h2 id="head_1">ERROR!</h2>
+			<p id="value_1">ERROR!</p>
+			<div>
+				<h2 id="head_2">ERROR!</h2>
+				<p id="value_2a">ERROR!</p>
+			</div>
 		</div>
 		<div class="article2">
-			<h2>Article 2</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<p id="value_2b" class="above_text">ERROR</p>
 		</div>
 		<div class="article3">
-			<h2>Article 3</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<img src="../media/images/before/i_newspaper_missle.jpg" class="above_text">
 		</div>
+		
 	</div>
+
+	
+	<!-- PAGE 3 -->
 	<div id="p3" style="background-image:url(../media/images/pages/03.jpeg);">
 	<!--
 	<video id="vid1" src="../media/video/testvideo.m4v" controls>
@@ -167,6 +186,94 @@ audio {
 		Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
 	</video>
 	-->
+		<div class="article1">
+			<h2 id="head_3" class="head_through">ERROR!</h2>
+			<p id="value_3">ERROR!</p>
+			
+		</div>
+		<div class="article2">
+			<img src="../media/images/before/i_newspaper_fidelcastro_speech.jpg" class="above_text">
+			
+		</div>
+		<div class="article3">
+			<h2 id="head_4">ERROR!</h2>
+			<p id="value_4" class="above_text">ERROR</p>
+		</div>
+	</div>
+
+	<!-- PAGE 4 -->
+	<div id="p4" style="background-image:url(../media/images/pages/03.jpeg);">
+		<img src="../media/images/before/i_newspaper_beach.jpg" class="above_text" height="350" style="padding-left:30px; width:515px;"> 
+		<div class="head_through">
+			<h2 id="head_5">ERROR!</h2>
+			<div class="article1" style="width:40%;">
+				<img src="../media/images/before/i_newspaper_plane.jpg" class="above_text"> 
+				<canvas style="display:none;" id="testCanvas" width="200" height="100"></canvas>
+			</div>
+		</div>
+
+		<div class="article2">
+			<p id="value_5">ERROR!</p>
+		</div>
+	</div>
+
+	<!-- PAGE 5 -->
+	<div id="p5" style="background-image:url(../media/images/pages/03.jpeg);">
+		<h2 id="head_6" style="text-algin:center; padding-left:40px;">ERROR!</h2>
+			
+		<div class="article1">
+			<p id="value_6a">ERROR!</p>
+		</div>
+
+		<div class="article2">
+			<p id="value_6b">ERROR!</p>
+		</div>
+		<img src="../media/images/before/i_newspaper_sovietship.jpg" height="430" style="padding-left:30px; width:515px;" class="above_text"> 
+	</div>
+	
+	<!-- PAGE 6 -->
+	<div id="p6" style="background-image:url(../media/images/pages/03.jpeg);">
+		<div class="article1" style="width:40%;">
+			<h2 id="head_7">ERROR!</h2>
+			<p id="value_7">ERROR!</p>
+			<img src="../media/images/during/i_newspaper_missle_range.jpg" height="190" style="position:relative; bottom:10px;">
+		</div>
+		<div class="article2">
+			<h2 id="head_8">ERROR!</h2>
+			<img src="../media/images/during/i_newspaper_jfk_on_phone.jpg">
+			<p id="value_8">ERROR!</p>
+		</div>
+	</div>
+	
+	<!-- PAGE 7 -->
+	<div id="p7" style="background-image:url(../media/images/pages/03.jpeg);">
+		<div class="article1">
+			<h2 id="head_9">USA - Bald ohne die wichtigsten Industriestädte und Hauptstadt?</h2>
+			<p id="value_9">Sechs weitere U-2-Aufklärungsflüge erfolgten über die Raketenstellungen. Die Luftaufnahmen bewiesen die Existenz von 16 bis 32 Raketen mit einer Reichweite von bis zu 4 500 km. Diese Raketen hätten neben der amerikanischen Hauptstadt auch die wichtigsten Industriestädte der USA erreichen können; die Vorwarnzeit hätte nur fünf Minuten betragen.</p>
+			<div>
+				<h2 id="head_10">USA – Her mit der Seeblockade!</h2>
+				<p id="value_10a">Der sowjetische Außenminister Andrei Gromyko besuchte Kennedy, wie schon seit längerem geplant. Kennedy sprach die Situation auf Kuba nicht an, da er aus taktischen Gründen Geheimhaltung wahren wollte. Allerdings wurde mehrfach die alte sowjetische Forderung angesprochen, </p>
+			</div>
+		</div>
+		<div class="article2">
+			<p id="value_10b" class="above_text">West-Berlin müsse entmilitarisiert werden. Dadurch erhärtete sich die amerikanische Annahme, die Sowjetunion wolle durch ihr Vorgehen auf Kuba die eigene Position in neuen Berlinverhandlungen verbessern. Eine Auffassung, die auch die Westalliierten teilten, die sich später aber als Fehlinterpretation erweisen wird. Meldungen von umfassenden neuen Waffenlieferungen nach Kuba verbreiteten sich in Washington, D.C.; die Militärs wurden ungeduldig. Eine Seeblockade hielten die US-Generäle für zu schwach: Man müsse sofort mit Luftangriffen und anschließender Invasion handeln. Air-Force-General Curtis E. LeMay drängte auf einen Angriff: „Der rote Hund gräbt im Hinterhof der USA und muss dafür bestraft werden.“ Justizminister Robert F. Kennedy, Bruder des Präsidenten, ließ durch seinen Stellvertreter Nicholas deB. Katzenbach die Rechtsgrundlagen für eine Seeblockade Kubas prüfen. Im Verlauf der Gespräche im ExComm zog John F. Kennedy eine Seeblockade vor.</p>
+		</div>
+	</div>
+	
+	
+</div>
+	<!--
+	<div id="p7" style="background-image:url(../media/images/pages/03.jpeg);">
+		<button type="button" class="btn btn-info" id="quizbutton">
+			<a href="quiz.html" class="shake" >Zum Quiz</a>
+		</button>
+
+	</div>
+	<div id="p8" style="background-image:url(../media/images/pages/03.jpeg);"></div>
+	-->
+
+
+<!--
 		<div class="article1">
 			<h2>Article 4</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
@@ -192,34 +299,11 @@ audio {
 			<h2>Article 7</h2>
 			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</p>
 		</div>
-	</div>
+-->
 
-	<div id="p4" style="background-image:url(../media/images/pages/03.jpeg);">
-		<div class="article1">
-			<h2>Article 8</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-			<canvas id="testCanvas" width="200" height="100"></canvas>
-		</div>
-
-		<div class="article2">
-			<h2>Article 9</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-		</div>
-		<div class="article3">
-			<h2>Article 10</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-		</div>
-	</div>
-
-	<div id="p5" style="background-image:url(../media/images/pages/03.jpeg);">
-		<button type="button" class="btn btn-info" id="quizbutton">
-			<a href="quiz.html" class="shake" >Zum Quiz</a>
-		</button>
-
-	</div>
-	<div id="p6" style="background-image:url(../media/images/pages/03.jpeg);"></div>
-</div>
-
+<script src="../javascript/implement_json.js">
+	
+</script>
 
 <script type="text/javascript">
 
@@ -248,6 +332,7 @@ audio {
 	});
 
 </script>
+
 <script id="editable">
 	var stage;
 	var isDrawing;

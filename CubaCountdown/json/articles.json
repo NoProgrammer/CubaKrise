@@ -1,12 +1,13 @@
 {
 	"articles": [
 		{
-			"header":"USA und UdSSR - Die neuen Weltmächte!",
+			"header":"Die neuen Weltmächte!",
 			"value":"Nach dem zweiten Weltkrieg gab es die Weltmächte USA und UdSSR. Sie standen beide für gegensätzliche Wirtschaftssysteme und Ideologien, was, anfangs 1950, zu einem Wettrüsten führte. Im Laufe der 1950er Jahren war die USA der UdSSR in der Zahl der Atomwaffen und der Trägermittel stark überlegen, doch als die Sowjetunion 1957 die erste funktionsfähige Interkontinentalrakete der Welt vorstellte, führte das im Westen zu einem Schock und Angst."
 		},
 		{
 			"header":"Das Wettrüsten geht in die nächste Runde",
-			"value":"Um die Vorwarnzeit zu umgehen, stellte die Sowjetunion im Jahr 1958 atomare Mittelstreckenraketen in der DDR auf, die gegen Ziele in Westeuropa, insbesondere die Bundesrepublik Deutschland, gerichtet waren. Diese Mittelstreckenraketen wurden aber dann doch überraschend nach Kaliningrad verlegt. Die nächste Stufe des Wettrüstens erreichte die USA im Januar 1959 mit der Aufstellung von nuklearen Mittelstreckenraketen in England, Süditalien und in der Türkei. Anfang der 1960er Jahre war es erstmals möglich, dass beide Weltmächte sich von heimischen Boden aus mit nuklearen Interkontinentalraketen hätten beschießen können. "
+			"value1":"Um die Vorwarnzeit zu umgehen, stellte die Sowjetunion im Jahr 1958 atomare Mittelstreckenraketen in der DDR auf, die gegen Ziele in Westeuropa, insbesondere die Bundesrepublik Deutschland, gerichtet waren. Diese",
+			"value2":"Mittelstreckenraketen wurden aber dann doch überraschend nach Kaliningrad verlegt. Die nächste Stufe des Wettrüstens erreichte die USA im Januar 1959 mit der Aufstellung von nuklearen Mittelstreckenraketen in England, Süditalien und in der Türkei. Anfang der 1960er Jahre war es erstmals möglich, dass beide Weltmächte sich von heimischen Boden aus mit nuklearen Interkontinentalraketen hätten beschießen können. "
 		},
 		{
 			"header":"Castro zieht beide Weltmächte auf seine Seite! ",
@@ -22,7 +23,8 @@
 		},
 		{
 			"header":"Mittelstreckenraketen der Sowjetunion am Weg nach Kuba ",
-			"value":"Am 8. September 1962 legte das sowjetische Frachtschiff Omsk mit einer Ladung von Mittelstreckenraketen in Havanna an, jedoch brachten sie die Fracht nicht an Land. Eine Woche später wurden Aufklärungsfotos von dem mit Militärgütern beladenen sowjetischen Frachtschiff Poltava gemacht, dass sich auf dem Weg nach Kuba befand. "
+			"value":"Am 8. September 1962 legte das sowjetische Frachtschiff Omsk mit einer Ladung von Mittelstreckenraketen in Havanna an, jedoch brachten sie die Fracht nicht an Land.", 
+			"val":"Eine Woche später wurden Aufklärungsfotos von dem mit Militärgütern beladenen sowjetischen Frachtschiff Poltava gemacht, dass sich auf dem Weg nach Kuba befand. "
 		},
 		{
 			"header":"Fotos bestätigen: Teile der USA könnten mit den Mittelstreckenraketen der UdSSR erreicht werden! ",
@@ -38,7 +40,8 @@
 		},
 		{
 			"header":"USA – Her mit der Seeblockade! ",
-			"value":"Der sowjetische Außenminister Andrei Gromyko besuchte Kennedy, wie schon seit längerem geplant. Kennedy sprach die Situation auf Kuba nicht an, da er aus taktischen Gründen Geheimhaltung wahren wollte. Allerdings wurde mehrfach die alte sowjetische Forderung angesprochen, West-Berlin müsse entmilitarisiert werden. Dadurch erhärtete sich die amerikanische Annahme, die Sowjetunion wolle durch ihr Vorgehen auf Kuba die eigene Position in neuen Berlinverhandlungen verbessern. Eine Auffassung, die auch die Westalliierten teilten, die sich später aber als Fehlinterpretation erweisen wird. Meldungen von umfassenden neuen Waffenlieferungen nach Kuba verbreiteten sich in Washington, D.C.; die Militärs wurden ungeduldig. Eine Seeblockade hielten die US-Generäle für zu schwach: Man müsse sofort mit Luftangriffen und anschließender Invasion handeln. Air-Force-General Curtis E. LeMay drängte auf einen Angriff: „Der rote Hund gräbt im Hinterhof der USA und muss dafür bestraft werden.“ Justizminister Robert F. Kennedy, Bruder des Präsidenten, ließ durch seinen Stellvertreter Nicholas deB. Katzenbach die Rechtsgrundlagen für eine Seeblockade Kubas prüfen. Im Verlauf der Gespräche im ExComm zog John F. Kennedy eine Seeblockade vor. "
+			"value":"Der sowjetische Außenminister Andrei Gromyko besuchte Kennedy, wie schon seit längerem geplant. Kennedy sprach die Situation auf Kuba nicht an, da er aus taktischen Gründen Geheimhaltung wahren wollte. Allerdings wurde mehrfach die alte sowjetische Forderung angesprochen, ",
+			"val":"West-Berlin müsse entmilitarisiert werden. Dadurch erhärtete sich die amerikanische Annahme, die Sowjetunion wolle durch ihr Vorgehen auf Kuba die eigene Position in neuen Berlinverhandlungen verbessern. Eine Auffassung, die auch die Westalliierten teilten, die sich später aber als Fehlinterpretation erweisen wird. Meldungen von umfassenden neuen Waffenlieferungen nach Kuba verbreiteten sich in Washington, D.C.; die Militärs wurden ungeduldig. Eine Seeblockade hielten die US-Generäle für zu schwach: Man müsse sofort mit Luftangriffen und anschließender Invasion handeln. Air-Force-General Curtis E. LeMay drängte auf einen Angriff: „Der rote Hund gräbt im Hinterhof der USA und muss dafür bestraft werden.“ Justizminister Robert F. Kennedy, Bruder des Präsidenten, ließ durch seinen Stellvertreter Nicholas deB. Katzenbach die Rechtsgrundlagen für eine Seeblockade Kubas prüfen. Im Verlauf der Gespräche im ExComm zog John F. Kennedy eine Seeblockade vor. "
 		},
 		{
 			"header":"Hawks and Doves – wer wird gewinnen? ",
