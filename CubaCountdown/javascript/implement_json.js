@@ -1,5 +1,5 @@
 window.onload = function() {
-				alert(document.getElementById('head_9').innerHTML);
+				/*alert(document.getElementById('head_9').innerHTML);*/
 				var xmlhttp = new XMLHttpRequest();
 				xmlhttp.onreadystatechange = function() {
 					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -40,7 +40,10 @@ window.onload = function() {
 						document.getElementById('value_6b').innerHTML = articles[5].val;
 						document.getElementById('value_7').innerHTML = articles[6].value;
 						document.getElementById('value_8').innerHTML = articles[7].value;
-						/*document.getElementById('value_9').innerHTML = articles[8].value;*/
+						/*document.getElementById('value_9').innerHTML = articles[8].value;
+						document.getElementById('value_10a').innerHTML = articles[9].value1;
+						document.getElementById('value_10b').innerHTML = articles[9].value2;
+						document.getElementById('value_11').innerHTML = articles[10].value;*/
 					}
 				}
 				xmlhttp.open('GET', '../json/articles.json', true);
