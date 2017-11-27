@@ -39,14 +39,16 @@ nav {
 .strich { margin-left:10%; margin-right:10%; }
 .strich2 { margin-right:10%; }
 
-#headline { margin-left:20%; }
+#headline { margin-left:250px; }
 
-#score { margin-left:20%; font-weight: normal; }
+#score { margin-left:250px; font-weight: normal; }
+
+.timer { margin-top:30px; }
 
 footer { margin-right:10%; }
 
-.timer {
-    float:right;
-    position:relative;
-    bottom:50px;
+#quiz-time-left {
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
 }
