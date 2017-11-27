@@ -6,7 +6,7 @@ body{
 	float:left;
 	padding-left:40px;
 	
-	width:35%;
+	width:40%;
 	
 	/* 
 	border-right:1px solid;
@@ -39,6 +39,11 @@ body{
 	top:10px;
 }
 
+.p11 {
+	position:relative;
+	top:20px;
+}
+
 #magazine{
 	width:1152px;
 	height:700px;
@@ -48,9 +53,13 @@ body{
 	background-color:#ccc;
 	background-size:100% 100%;
 }
-h1, h5{
+h1, h2, h5{
 	text-align: center;
 
+}
+
+header {
+	text-align:center;
 }
 
 p {
@@ -63,25 +72,16 @@ a {
 	text-decoration: none;
 }
 
-#covergrid {
-  display: grid;
-  grid-template-rows: 50vh repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+.title_pic {
+	width:536px;
+	margin-left:20px;
+}
 
-  margin: 0;
+footer {
+	margin-left:20px;
+	margin-right:20px;
+	text-align: center;
 }
-#covergrid > div {
-  font-size: 4vw;
-  padding: 10px;
-}
-#covergrid > div:nth-child(1) {
-  grid-column: span 4;
-  }
-#covergrid > div:nth-child(2) {
-  grid-column: span 4;
-  }
-  
 
 
 #img1{
