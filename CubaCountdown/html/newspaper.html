@@ -3,266 +3,127 @@
 <head>
 <meta charset="utf-8">
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="../javascript/scripts/turn.min.js"></script>
+<script type="text/javascript" src="../javascript/scripts/turn.js"></script>
 
 
 <link href="../javascript/EaselJS/_assets/css/examples.css" rel="stylesheet" type="text/css"/>
 <script src="../javascript/EaselJS/_assets/js/examples.js"></script>
-
+<link href="../css/stylesheets/newspaper.css" rel="stylesheet" type="text/css">
 <script src="../javascript/EaselJS/lib/easeljs-NEXT.combined.js"></script>
-
-
-<style type="text/css">
-body{
-	background:#ccc;
-}
-
-.article1 {
-	float:left;
-	padding-left:40px;
-	
-	width:35%;
-	
-	/* 
-	border-right:1px solid;
-	padding-right:40px;
-	*/
-	
-
-}
-
-.article2 {
-	float:right;
-	padding-right:20px;
-	padding-left:20px;
-	width:43.9%;
-}
-
-.article3 {
-	/*
-	border-top:1px solid;
-	border-bottom:1px solid;
-	*/
-	float:right;
-	padding-right:20px;
-	padding-left:20px;
-	width:43.9%;
-}
-
-.above_text {
-	position:relative;
-	top:10px;
-}
-
-#magazine{
-	width:1152px;
-	height:700px;
-	font-family: 'Playfair Display', serif;
-}
-#magazine .turn-page{
-	background-color:#ccc;
-	background-size:100% 100%;
-}
-h1, h5{
-	text-align: center;
-
-}
-
-p {
-	position:relative;
-	bottom:10px;
-}
-
-a {
-	color:white;
-	text-decoration: none;
-}
-
-#covergrid {
-  display: grid;
-  grid-template-rows: 50vh repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-
-  margin: 0;
-}
-#covergrid > div {
-  font-size: 4vw;
-  padding: 10px;
-}
-#covergrid > div:nth-child(1) {
-  grid-column: span 4;
-  }
-#covergrid > div:nth-child(2) {
-  grid-column: span 4;
-  }
-  
-
-
-#img1{
-	width: 500px;
-	margin-top: 15px;
-	margin-left: 35px;
-	border-width: thin;
-	border-style: solid;
-}
-#vid1{
-	width: 400px;
-	margin-left: 50px;
-	margin-top: 20px;
-}
-
-#quizbutton{
-	position:relative;
-	top:300px;
-	float:right;
-	margin-right:40%;
-	width: 100px;
-	height: 50px;
-
-
-	font-size: 14px;
-	font-weight:bold;
-
-	color: white;
-
-
-	border: none;
-
-	background-color: #555555;
-	background-color: rgba(71, 82, 94, 0.6);
-}
-
-img {
-	width:100%;
-}
-
-audio {
-	opacity: 0.6;
-}
-
-.head_through {
-	text-align:center;
-}
-
-
-</style>
 </head>
 <body onload="init();">
-
-<div id="magazine" onload="">
-	<div id="p1" style="background-image:url(../media/images/pages/03.jpeg);">
-		<div id="covergrid">
-			<div class="shake-vertical"><h1>Cuba Countdown</h1></div>
-			<div><h5>Ein E-Learning Projekt der 5AI über die Kubakrise</h5></div>
-		</div>
-	</div>
-
-	<!-- PAGE 2 -->
-	<div id="p2" style="background-image:url(../media/images/pages/03.jpeg);">
-		<div class="article1">
-			<h2 id="head_1">ERROR!</h2>
-			<p id="value_1">ERROR!</p>
-			<div>
-				<h2 id="head_2">ERROR!</h2>
-				<p id="value_2a">ERROR!</p>
+	<div id="magazine">
+		<div id="p1" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div id="covergrid">
+				<div class="shake-vertical"><h1>Cuba Countdown</h1></div>
+				<div><h5>Ein E-Learning Projekt der 5AI über die Kubakrise</h5></div>
 			</div>
 		</div>
-		<div class="article2">
-			<p id="value_2b" class="above_text">ERROR</p>
+
+		<!-- PAGE 2 -->
+		<div id="p2" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1">
+				<h2 id="head_1">ERROR!</h2>
+				<p id="value_1">ERROR!</p>
+				<div>
+					<h2 id="head_2">ERROR!</h2>
+					<p id="value_2a">ERROR!</p>
+				</div>
+			</div>
+			<div class="article2">
+				<p id="value_2b" class="above_text">ERROR</p>
+			</div>
+			<div class="article3">
+				<img src="../media/images/before/i_newspaper_missle.jpg" class="above_text">
+			</div>
 		</div>
-		<div class="article3">
-			<img src="../media/images/before/i_newspaper_missle.jpg" class="above_text">
+
+	
+		<!-- PAGE 3 -->
+		<div id="p3" style="background-image:url(../media/images/pages/03.jpeg);">
+		<!--
+		<video id="vid1" src="../media/video/testvideo.m4v" controls>
+			Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+			Dieser Film zeigt eine Demonstration des video-Elements.
+			Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
+		</video>
+		-->
+			<div class="article1">
+				<h2 id="head_3" class="head_through">ERROR!</h2>
+				<p id="value_3">ERROR!</p>
+				
+			</div>
+			<div class="article2">
+				<img src="../media/images/before/i_newspaper_fidelcastro_speech.jpg" class="above_text">
+				
+			</div>
+			<div class="article3">
+				<h2 id="head_4">ERROR!</h2>
+				<p id="value_4" class="above_text">ERROR</p>
+			</div>
+		</div>
+
+		<!-- PAGE 4 -->
+		<div id="p4" style="background-image:url(../media/images/pages/03.jpeg);">
+			<img src="../media/images/before/i_newspaper_beach.jpg" class="above_text" height="350" style="padding-left:30px; width:515px;"> 
+			<div class="head_through">
+				<h2 id="head_5">ERROR!</h2>
+				<div class="article1" style="width:40%;">
+					<img src="../media/images/before/i_newspaper_plane.jpg" class="above_text"> 
+					<canvas style="display:none;" id="testCanvas" width="200" height="100"></canvas>
+				</div>
+			</div>
+
+			<div class="article2">
+				<p id="value_5">ERROR!</p>
+			</div>
+		</div>
+
+		<!-- PAGE 5 -->
+		<div id="p5" style="background-image:url(../media/images/pages/03.jpeg);">
+			<h2 id="head_6" style="text-algin:center; padding-left:40px;">ERROR!</h2>
+				
+			<div class="article1">
+				<p id="value_6a">ERROR!</p>
+			</div>
+
+			<div class="article2">
+				<p id="value_6b">ERROR!</p>
+			</div>
+			<img src="../media/images/before/i_newspaper_sovietship.jpg" height="430" style="padding-left:30px; width:515px;" class="above_text"> 
 		</div>
 		
-	</div>
-
-	
-	<!-- PAGE 3 -->
-	<div id="p3" style="background-image:url(../media/images/pages/03.jpeg);">
-	<!--
-	<video id="vid1" src="../media/video/testvideo.m4v" controls>
-		Ihr Browser kann dieses Video nicht wiedergeben.<br/>
-		Dieser Film zeigt eine Demonstration des video-Elements.
-		Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
-	</video>
-	-->
-		<div class="article1">
-			<h2 id="head_3" class="head_through">ERROR!</h2>
-			<p id="value_3">ERROR!</p>
-			
-		</div>
-		<div class="article2">
-			<img src="../media/images/before/i_newspaper_fidelcastro_speech.jpg" class="above_text">
-			
-		</div>
-		<div class="article3">
-			<h2 id="head_4">ERROR!</h2>
-			<p id="value_4" class="above_text">ERROR</p>
-		</div>
-	</div>
-
-	<!-- PAGE 4 -->
-	<div id="p4" style="background-image:url(../media/images/pages/03.jpeg);">
-		<img src="../media/images/before/i_newspaper_beach.jpg" class="above_text" height="350" style="padding-left:30px; width:515px;"> 
-		<div class="head_through">
-			<h2 id="head_5">ERROR!</h2>
+		<!-- PAGE 6 -->
+		<div id="p6" style="background-image:url(../media/images/pages/03.jpeg);">
 			<div class="article1" style="width:40%;">
-				<img src="../media/images/before/i_newspaper_plane.jpg" class="above_text"> 
-				<canvas style="display:none;" id="testCanvas" width="200" height="100"></canvas>
+				<h2 id="head_7">ERROR!</h2>
+				<p id="value_7">ERROR!</p>
+				<img src="../media/images/during/i_newspaper_missle_range.jpg" height="190" style="position:relative; bottom:10px;">
+			</div>
+			<div class="article2">
+				<h2 id="head_8">ERROR!</h2>
+				<img src="../media/images/during/i_newspaper_jfk_on_phone.jpg">
+				<p id="value_8">ERROR!</p>
 			</div>
 		</div>
-
-		<div class="article2">
-			<p id="value_5">ERROR!</p>
-		</div>
-	</div>
-
-	<!-- PAGE 5 -->
-	<div id="p5" style="background-image:url(../media/images/pages/03.jpeg);">
-		<h2 id="head_6" style="text-algin:center; padding-left:40px;">ERROR!</h2>
-			
-		<div class="article1">
-			<p id="value_6a">ERROR!</p>
-		</div>
-
-		<div class="article2">
-			<p id="value_6b">ERROR!</p>
-		</div>
-		<img src="../media/images/before/i_newspaper_sovietship.jpg" height="430" style="padding-left:30px; width:515px;" class="above_text"> 
-	</div>
-	
-	<!-- PAGE 6 -->
-	<div id="p6" style="background-image:url(../media/images/pages/03.jpeg);">
-		<div class="article1" style="width:40%;">
-			<h2 id="head_7">ERROR!</h2>
-			<p id="value_7">ERROR!</p>
-			<img src="../media/images/during/i_newspaper_missle_range.jpg" height="190" style="position:relative; bottom:10px;">
-		</div>
-		<div class="article2">
-			<h2 id="head_8">ERROR!</h2>
-			<img src="../media/images/during/i_newspaper_jfk_on_phone.jpg">
-			<p id="value_8">ERROR!</p>
-		</div>
-	</div>
-	
-	<!-- PAGE 7 -->
-	<div id="p7" style="background-image:url(../media/images/pages/03.jpeg);">
-		<div class="article1">
-			<h2 id="head_9">USA - Bald ohne die wichtigsten Industriestädte und Hauptstadt?</h2>
-			<p id="value_9">Sechs weitere U-2-Aufklärungsflüge erfolgten über die Raketenstellungen. Die Luftaufnahmen bewiesen die Existenz von 16 bis 32 Raketen mit einer Reichweite von bis zu 4 500 km. Diese Raketen hätten neben der amerikanischen Hauptstadt auch die wichtigsten Industriestädte der USA erreichen können; die Vorwarnzeit hätte nur fünf Minuten betragen.</p>
-			<div>
-				<h2 id="head_10">USA – Her mit der Seeblockade!</h2>
-				<p id="value_10a">Der sowjetische Außenminister Andrei Gromyko besuchte Kennedy, wie schon seit längerem geplant. Kennedy sprach die Situation auf Kuba nicht an, da er aus taktischen Gründen Geheimhaltung wahren wollte. Allerdings wurde mehrfach die alte sowjetische Forderung angesprochen, </p>
+		
+		<!-- PAGE 7 -->
+		<div id="p7" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1">
+				<h2 id="head_9">ERROR!</h2>
+				<p id="value_9">ERROR!</p>
+				<div>
+					<h2 id="head_10">ERROR!</h2>
+					<p id="value_10a">ERROR!</p>
+				</div>
+			</div>
+			<div class="article2">
+				<p id="value_10b" class="above_text">ERROR!</p>
 			</div>
 		</div>
-		<div class="article2">
-			<p id="value_10b" class="above_text">West-Berlin müsse entmilitarisiert werden. Dadurch erhärtete sich die amerikanische Annahme, die Sowjetunion wolle durch ihr Vorgehen auf Kuba die eigene Position in neuen Berlinverhandlungen verbessern. Eine Auffassung, die auch die Westalliierten teilten, die sich später aber als Fehlinterpretation erweisen wird. Meldungen von umfassenden neuen Waffenlieferungen nach Kuba verbreiteten sich in Washington, D.C.; die Militärs wurden ungeduldig. Eine Seeblockade hielten die US-Generäle für zu schwach: Man müsse sofort mit Luftangriffen und anschließender Invasion handeln. Air-Force-General Curtis E. LeMay drängte auf einen Angriff: „Der rote Hund gräbt im Hinterhof der USA und muss dafür bestraft werden.“ Justizminister Robert F. Kennedy, Bruder des Präsidenten, ließ durch seinen Stellvertreter Nicholas deB. Katzenbach die Rechtsgrundlagen für eine Seeblockade Kubas prüfen. Im Verlauf der Gespräche im ExComm zog John F. Kennedy eine Seeblockade vor.</p>
-		</div>
+	
 	</div>
-	
-	
-</div>
+
 	<!--
 	<div id="p7" style="background-image:url(../media/images/pages/03.jpeg);">
 		<button type="button" class="btn btn-info" id="quizbutton">

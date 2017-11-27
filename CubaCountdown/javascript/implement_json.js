@@ -1,5 +1,5 @@
 window.onload = function() {
-				/*alert(document.getElementById('head_9').innerHTML);*/
+				
 				var xmlhttp = new XMLHttpRequest();
 				xmlhttp.onreadystatechange = function() {
 					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -16,10 +16,9 @@ window.onload = function() {
 						document.getElementById('head_6').innerHTML = articles[5].header;
 						document.getElementById('head_7').innerHTML = articles[6].header;
 						document.getElementById('head_8').innerHTML = articles[7].header;
-						console.log(document.getElementById('head_9'));
-						/*document.getElementById('head_9').innerHTML = articles[8].header;
+						document.getElementById('head_9').innerHTML = articles[8].header;
 						document.getElementById('head_10').innerHTML = articles[9].header;
-						document.getElementById('head_11').innerHTML = articles[10].header;
+						/*document.getElementById('head_11').innerHTML = articles[10].header;
 						document.getElementById('head_12').innerHTML = articles[11].header;
 						document.getElementById('head_13').innerHTML = articles[12].header;
 						document.getElementById('head_14').innerHTML = articles[13].header;
@@ -36,14 +35,14 @@ window.onload = function() {
 						document.getElementById('value_3').innerHTML = articles[2].value;
 						document.getElementById('value_4').innerHTML = articles[3].value;
 						document.getElementById('value_5').innerHTML = articles[4].value;
-						document.getElementById('value_6a').innerHTML = articles[5].value;
-						document.getElementById('value_6b').innerHTML = articles[5].val;
+						document.getElementById('value_6a').innerHTML = articles[5].value1;
+						document.getElementById('value_6b').innerHTML = articles[5].value2;
 						document.getElementById('value_7').innerHTML = articles[6].value;
 						document.getElementById('value_8').innerHTML = articles[7].value;
-						/*document.getElementById('value_9').innerHTML = articles[8].value;
+						document.getElementById('value_9').innerHTML = articles[8].value;
 						document.getElementById('value_10a').innerHTML = articles[9].value1;
 						document.getElementById('value_10b').innerHTML = articles[9].value2;
-						document.getElementById('value_11').innerHTML = articles[10].value;*/
+						/*document.getElementById('value_11').innerHTML = articles[10].value;*/
 					}
 				}
 				xmlhttp.open('GET', '../json/articles.json', true);
