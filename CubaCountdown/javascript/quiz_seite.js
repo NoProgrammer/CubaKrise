@@ -28,6 +28,9 @@ quiz.prototype.guess = function(answer) {
     if(this.getQuestionIndex().correctAnswer(answer)) {
         this.score++;
     }
+    else {
+    	total_seconds = total_seconds - 10;
+    }
 
     this.questionIndex++;
 }
