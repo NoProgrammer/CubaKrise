@@ -86,6 +86,8 @@ var quiz = new quiz(questions);
 
 populate();
 
+/* Timer Controls */
+
 var total_seconds = 60*2;
 var c_minutes = parseInt(total_seconds/60);
 var c_seconds = parseInt(total_seconds%60);
