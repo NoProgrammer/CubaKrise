@@ -78,11 +78,13 @@ function showProgress() {
 }
 
 var questions = [
-    new question("Kubakrise ist nice?", ["Ja", "Nein", "Keine Ahnung!", "Hilfe"], "Nein"),
-    new question("Macht ein Quiz Spaß?", ["Ja", "Hallo", "Keine Ahnung!", "Hilfe"], "Keine Ahnung!"),
-    new question("Habe ich schon Fragen?", ["Ja", "Nein", "Keine Ahnung!", "Hilfe"], "Nein"),
-    new question("Will ich das machen?", ["Ja", "Nein", "Keine Ahnung!", "Hilfe"], "Hilfe"),
-    new question("Ist das ein Lorem Ipsum", ["Ja", "Nein", "Keine Ahnung!", "Hilfe"], "Ja")
+    new question("Wann hat die Kubakrise begonnen?", ["16.Oktober 1962", "19.Oktober 1962", "28.Oktober 1962", "14.Oktober 1962"], "16.Oktober 1962"),
+    new question("Wann hat die Kubakrise geendet?", ["28.Oktober 1962", "20.Oktober 1962", "26.Oktober 1962", "2.November 1962"], "28.Oktober 1962"),
+    new question("Wo stationierte die U.S die Raketenstation? (Nuklearraketen)", ["Italien & Türkei", "Deutschland & Türkei", "Griechenland & Italien", "Ukraine & Deutschland"], "Italien & Türkei"),
+    new question("Was ist der 'heiße Draht' bzw. was wird damit gemeint?", ["Zündschnur der Rakete", "Eine Fernbeschreibung zwischen Kreml und dem weißen Haus", "Blockade-Linie der Seeblockade Kubas", "Vertrag über das Verbot von Kernwaffenversuchen"], "Eine Fernbeschreibung zwischen Kreml und dem weißen Haus"),
+    new question("Wann begann die Seeblockade Kubas durch die USA?", ["24.Oktober 1963", "26.Oktober 1962", "23.Oktober 1962", "24.Oktober 1962"], "24.Oktober 1962"),
+    new question("Welche politische Einstellung hatten USA & UdSSR?", ["Sozialismus & Nationalismus", "Sozialismus & Kommunismus", "Kapitalismus & Kommunismus", "Kapitalismus & Nationalismus"], "Kapitalismus & Kommunismus"),
+    new question("Durch welches Ereignis konnte die Sowjetunion Raketen auf Kuba aufbauen?", ["Bürgerkrieg auf Kuba", "Geheimtreffen zwischen Kennedy & Dobrynin", "Fidel Castro kam an die Macht", "Verhandlung über Rüstungskontrolle"], "Fidel Castro kam an die Macht")
 ];
 
 var quiz = new quiz(questions);
