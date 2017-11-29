@@ -12,8 +12,14 @@ body{
 	border-right:1px solid;
 	padding-right:40px;
 	*/
-	
+}
 
+.cigar {
+	position:relative;
+	float:right;
+	border:1px solid;
+	width:100px;
+	height:698px;
 }
 
 .article2 {
