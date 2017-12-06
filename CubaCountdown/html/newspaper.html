@@ -3,222 +3,238 @@
 <head>
 <meta charset="utf-8">
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="../javascript/scripts/turn.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/dist/csshake.min.css">
+<script type="text/javascript" src="../javascript/scripts/turn.js"></script>
 
 
 <link href="../javascript/EaselJS/_assets/css/examples.css" rel="stylesheet" type="text/css"/>
 <script src="../javascript/EaselJS/_assets/js/examples.js"></script>
-
+<link href="../css/stylesheets/newspaper.css" rel="stylesheet" type="text/css">
 <script src="../javascript/EaselJS/lib/easeljs-NEXT.combined.js"></script>
-
-<style type="text/css">
-body{
-	background:#ccc;
-}
-
-.article1 {
-	float:left;
-	padding-left:40px;
-	padding-right:40px;
-	width:35%;
-	/*
-	border-right:1px solid;
-	*/
-
-}
-
-.article2 {
-	float:right;
-	padding-right:20px;
-	padding-left:20px;
-	width:43.9%;
-}
-
-.article3 {
-	/*
-	border-top:1px solid;
-	border-bottom:1px solid;
-	*/
-	float:right;
-	padding-right:20px;
-	padding-left:20px;
-	width:43.9%;
-}
-
-#magazine{
-	width:1152px;
-	height:700px;
-	font-family: 'Playfair Display', serif;
-}
-#magazine .turn-page{
-	background-color:#ccc;
-	background-size:100% 100%;
-}
-h1, h5{
-	text-align: center;
-
-}
-
-p {
-	position:relative;
-	bottom:10px;
-}
-
-a {
-	color:white;
-	text-decoration: none;
-}
-
-#covergrid {
-  display: grid;
-  grid-template-rows: 50vh repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-
-  margin: 0;
-}
-#covergrid > div {
-  font-size: 4vw;
-  padding: 10px;
-}
-#covergrid > div:nth-child(1) {
-  grid-column: span 4;
-  }
-#covergrid > div:nth-child(2) {
-  grid-column: span 4;
-  }
-
-#img1{
-	width: 500px;
-	margin-top: 15px;
-	margin-left: 35px;
-	border-width: thin;
-	border-style: solid;
-}
-#vid1{
-	width: 400px;
-	margin-left: 50px;
-	margin-top: 20px;
-}
-
-#quizbutton{
-	position:relative;
-	top:300px;
-	float:right;
-	margin-right:40%;
-	width: 100px;
-	height: 50px;
-
-
-	font-size: 14px;
-	font-weight:bold;
-
-	color: white;
-
-
-	border: none;
-
-	background-color: #555555;
-	background-color: rgba(71, 82, 94, 0.6);
-}
-
-img {
-	width:100%;
-}
-
-audio {
-	opacity: 0.6;
-}
-
-
-</style>
 </head>
 <body onload="init();">
 
-<div id="magazine">
-	<div id="p1" style="background-image:url(../media/images/pages/02.jpg);">
-		<div id="covergrid">
-			<div class="shake-vertical"><h1>Cuba Countdown</h1></div>
-			<div><h5>Ein E-Learning Projekt der 5AI über die Kubakrise</h5></div>
-		</div>
+	<div class="cigar">
+		Cigar here!
 	</div>
+	
+	<div id="magazine">
+		<div id="p1" style="background-image:url(../media/images/pages/03.jpeg);">
+			<header>
+				<h1>Sonderausgabe: Cuba Countdown</h1>
+				<h3 style="font-weight: normal;">Eine Lerninitiative der HTL Rennweg</h3>
+			</header>
+			<section>
+				<img src="../media/images/during/i_newspaper_front.jpg" class="title_pic">
+			</section>
+			<footer>
+				<h5>Ein E-Learning Projekt der 5AI über die Kubakrise</h5>
+			</footer>
 
-		<div id="p2" style="background-image:url(../media/images/pages/white-paper-texture-with-flecks.jpeg);">
-		<div class="article1">
-			<h2>Article 1</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<img src="../media/images/before/i_newspaper_beach.jpg">
 		</div>
-		<div class="article2">
-			<h2>Article 2</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+		<!-- PAGE 2 -->
+		<div id="p2" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1">
+				<h2 id="head_1">ERROR!</h2>
+				<p id="value_1">ERROR!</p>
+				<div>
+					<h2 id="head_2">ERROR!</h2>
+					<p id="value_2a">ERROR!</p>
+				</div>
+			</div>
+			<div class="article2">
+				<p id="value_2b" class="above_text">ERROR</p>
+			</div>
+			<div class="article3">
+				<img src="../media/images/before/i_newspaper_missle.jpg" class="above_text">
+			</div>
 		</div>
-		<div class="article3">
-			<h2>Article 3</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+	
+		<!-- PAGE 3 -->
+		<div id="p3" style="background-image:url(../media/images/pages/03.jpeg);">
+		<!--
+		<video id="vid1" src="../media/video/testvideo.m4v" controls>
+			Ihr Browser kann dieses Video nicht wiedergeben.<br/>
+			Dieser Film zeigt eine Demonstration des video-Elements.
+			Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
+		</video>
+		-->
+			<div class="article1">
+				<h2 id="head_3" class="head_through">ERROR!</h2>
+				<p id="value_3">ERROR!</p>
+				
+			</div>
+			<div class="article2">
+				<img src="../media/images/before/i_newspaper_fidelcastro_speech.jpg" class="above_text">
+				
+			</div>
+			<div class="article3">
+				<h2 id="head_4">ERROR!</h2>
+				<p id="value_4" class="above_text">ERROR</p>
+			</div>
 		</div>
+
+		<!-- PAGE 4 -->
+		<div id="p4" style="background-image:url(../media/images/pages/03.jpeg);">
+			<img src="../media/images/before/i_newspaper_beach.jpg" class="above_text" height="350" style="padding-left:30px; width:515px;"> 
+			<div class="head_through">
+				<h2 id="head_5">ERROR!</h2>
+				<div class="article1" style="width:40%;">
+					<img src="../media/images/before/i_newspaper_plane.jpg" class="above_text"> 
+					<canvas style="display:none;" id="testCanvas" width="200" height="100"></canvas>
+				</div>
+			</div>
+
+			<div class="article2">
+				<p id="value_5">ERROR!</p>
+			</div>
+		</div>
+
+		<!-- PAGE 5 -->
+		<div id="p5" style="background-image:url(../media/images/pages/03.jpeg);">
+			<h2 id="head_6" style="text-algin:center; padding-left:40px;">ERROR!</h2>
+				
+			<div class="article1">
+				<p id="value_6a">ERROR!</p>
+			</div>
+
+			<div class="article2">
+				<p id="value_6b">ERROR!</p>
+			</div>
+			<img src="../media/images/before/i_newspaper_sovietship.jpg" height="430" style="padding-left:30px; width:515px;" class="above_text"> 
+		</div>
+		
+		<!-- PAGE 6 -->
+		<div id="p6" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1" style="width:40%;">
+				<h2 id="head_7">ERROR!</h2>
+				<p id="value_7">ERROR!</p>
+				<img src="../media/images/during/i_newspaper_missle_range.jpg" height="190" style="position:relative; bottom:10px;">
+			</div>
+			<div class="article2">
+				<h2 id="head_8">ERROR!</h2>
+				<img src="../media/images/during/i_newspaper_jfk_on_phone.jpg">
+				<p id="value_8">ERROR!</p>
+			</div>
+		</div>
+		
+		<!-- PAGE 7 -->
+		<div id="p7" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1">
+				<h2 id="head_9">ERROR!</h2>
+				<p id="value_9">ERROR!</p>
+				<div>
+					<h2 id="head_10">ERROR!</h2>
+					<p id="value_10a">ERROR!</p>
+				</div>
+			</div>
+			<div class="article2">
+				<p id="value_10b" class="above_text">ERROR!</p>
+			</div>
+		</div>
+
+		<!-- PAGE 8 -->
+		<div id="p8" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1">
+				<h2 id="head_11">ERROR!</h2>
+				<p id="value_11">ERROR!</p>
+				<div style="position:relative; bottom:10px;">
+					<h2 id="head_12">ERROR!</h2>
+					<p id="value_12a">ERROR!</p>
+				</div>
+			</div>
+			<div class="article2">
+				<p id="value_12b" class="above_text">ERROR!</p>
+			</div>
+		</div>
+
+		<!-- PAGE 9 -->
+		<div id="p9" style="background-image:url(../media/images/pages/03.jpeg);">
+
+			<div class="article1">
+				<img src="../media/images/after/i_newspaper_jfk_speech.jpg" class="above_text">
+				<h2 id="head_13">ERROR!</h2>
+				<p id="value_13a">ERROR!</p>
+			</div>
+			<div class="article2">
+				<p id="value_13b" class="above_text">ERROR!</p>
+			</div>
+		</div>
+
+		<!-- PAGE 10 -->
+		<div id="p10" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1">
+				<h2 id="head_14">ERROR!</h2>
+				<p id="value_14">ERROR!</p>
+			</div>
+			<div class="article2">
+				<h2 id="head_15">ERROR!</h2>
+				<p id="value_15a">ERROR!</p>
+				<img src="../media/images/during/i_newspaper_lockheed.jpg" style="position:relative; bottom: 10px;">
+				
+			</div>
+		</div>
+
+		<!-- PAGE 11 -->
+		<div id="p11" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1">
+				<p id="value_15b" class="above_text">ERROR!</p>
+				<br>
+				<h2 id="head_16" style="position:relative; bottom:20px;">ERROR!</h2>
+				<p id="value_16a">ERROR!</p>
+			</div>
+			<div class="article2 p11">
+				<p id="value_16b">ERROR!</p>
+				<audio id="audio_with_controls" controls src="https://wiki.selfhtml.org/local/Europahymne.mp3" type="audio/mp3" >
+			       Ihr Browser kann dieses Tondokument nicht wiedergeben.<br>
+			       Es enthält eine Aufführung der Europahymne.
+			       Sie können es unter
+			       <a href="https://wiki.selfhtml.org/local/Europahymne.mp3">diesem Link</a>
+			       abrufen.
+				</audio>
+			</div>
+		</div>
+
+		<!-- PAGE 12 -->
+		<div id="p12" style="background-image:url(../media/images/pages/03.jpeg);">
+			<div class="article1">
+				<h2 id="head_17">ERROR!</h2>
+				<p id="value_17">ERROR!</p>
+				<div style="position:relative; bottom:10px;">
+					<h2 id="head_18" ">ERROR!</h2>
+					<p id="value_18">ERROR!</p>
+				</div>
+			</div>
+			<div class="article2 p11">
+				<img src="../media/images/after/i_newspaper_jfk_contract.jpg" style="position: relative; top: 5px;">
+				<h2 id="head_19">ERROR!</h2>
+				<p id="value_19">ERROR!</p>
+			</div>
+		</div>
+
+		<!-- PAGE 13 -->
+		<div id="p13" style="background-image:url(../media/images/pages/03.jpeg);">
+			<h2 id="head_20" style="text-algin:center; padding-left:40px;">ERROR!</h2>
+				
+			<div class="article1">
+				<p id="value_20a">ERROR!</p>
+			</div>
+
+			<div class="article2">
+				<p id="value_20b">ERROR!</p>
+			</div>
+			<img src="../media/images/after/i_newspaper_jfk_people.jpg" style="padding-left:30px; width:515px;" class="above_text"> 
+		</div>
+
+		<!-- PAGE 14 - LAST PAGE -->
+		<div id="p14" style="background-image:url(../media/images/pages/03.jpeg);">
+			<button type="button" class="btn btn-info" id="quizbutton">
+				<a href="quiz.html" class="shake" >Zum Quiz</a>
+			</button>
+		</div>
+	
 	</div>
-	<div id="p3" style="background-image:url(../media/images/pages/02.jpg);">
-	<!--
-	<video id="vid1" src="../media/video/testvideo.m4v" controls>
-		Ihr Browser kann dieses Video nicht wiedergeben.<br/>
-		Dieser Film zeigt eine Demonstration des video-Elements.
-		Sie können ihn unter <a href="#">Link-Addresse</a> abrufen.
-	</video>
-	-->
-		<div class="article1">
-			<h2>Article 4</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-
-		</div>
-
-		<div class="article2">
-			<h2>Article 5</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-		</div>
-		<div class="article3">
-			<h2>Article 6</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-			<audio id="audio_with_controls" controls src="https://wiki.selfhtml.org/local/Europahymne.mp3" type="audio/mp3">
-		       Ihr Browser kann dieses Tondokument nicht wiedergeben.<br>
-		       Es enthält eine Aufführung der Europahymne.
-		       Sie können es unter
-		       <a href="https://wiki.selfhtml.org/local/Europahymne.mp3">diesem Link</a>
-		       abrufen.
-			</audio>
-		</div>
-		<div class="article1">
-			<h2>Article 7</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</p>
-		</div>
-	</div>
-
-	<div id="p4" style="background-image:url(../media/images/pages/02.jpg);">
-		<div class="article1">
-			<h2>Article 8</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-			<canvas id="testCanvas" width="200" height="100"></canvas>
-		</div>
-
-		<div class="article2">
-			<h2>Article 9</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-		</div>
-		<div class="article3">
-			<h2>Article 10</h2>
-			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
-		</div>
-	</div>
-
-	<div id="p5" style="background-image:url(../media/images/pages/02.jpg);">
-		<button type="button" class="btn btn-info" id="quizbutton">
-			<a href="quiz.html" class="shake" >Zum Quiz</a>
-		</button>
-
-	</div>
-	<div id="p6" style="background-image:url(../media/images/pages/02.jpg);"></div>
-</div>
 
 
 <script type="text/javascript">
@@ -248,6 +264,7 @@ audio {
 	});
 
 </script>
+
 <script id="editable">
 	var stage;
 	var isDrawing;
@@ -356,6 +373,8 @@ audio {
 		stage.update();
 	}
 </script>
+
+<script src="../javascript/implement_json.js"></script>
 
 </body>
 </html>
