@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Quiz</title>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="../css/stylesheets/quiz_seite.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <p>:)</p>
+                <hr class="strich">
+            </nav> 
+            <div id="quiz">
+             
+
+                <div class="buttons">
+                    <div>
+                        <h2 id="progress">Frage x von y:</h2>
+                    </div>
+                    <h2 id="question"></h2>
+                    <hr class="strich2">
+                    <button id="btn0">A</button><span id="choice0"></span><br>
+                    <button id="btn1">B</button><span id="choice1"></span><br>
+                    <button id="btn2">C</button><span id="choice2"></span><br>
+                    <button id="btn3">D</button><span id="choice3"></span>
+					<div class="timer">
+						<p id="quiz-time-left"></p>
+					</div>
+                </div>
+					
+            </div>
+			<script src="../javascript/quiz_seite.js"></script>
+			 <img src="https://unsplash.it/277/126?image=537" style="display:inline-block;margin-top:350px;margin-bottom:10px;width:277px;" />
+			<button style="position:fixed;right:0;top:150px;width:100px;height:50px;" onclick="explode()">
+				Explode
+			</button>
+    		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+			<!--    <script src="dist/jquery.imgexplode.min.js"></script>-->
+    		<script src="../javascript/Explode/jquery.imgexplode.js"></script>
+    		<script>
+       			function explode() {
+           		$("img").explodeRestore();
+            	setTimeout(function () {                
+                	$("img").explode({
+                		maxWidth: 12,
+                    	minWidth: 3,
+                    	radius: 450,
+                    	release: false,
+                    	recycle: false,
+                    	explodeTime: 500,
+                    	canvas: true,
+                    	maxAngle: 360,
+                    	gravity:true,
+                	});
+            	}, 300)
+        	}
+    		</script>
+        </div>
+    </body>
+</html>

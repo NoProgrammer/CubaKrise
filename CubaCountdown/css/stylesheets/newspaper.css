@@ -2,6 +2,14 @@ body{
 	background:#ccc;
 }
 
+.cigar {
+	position:absolute;
+	left:1170px;
+	width:100px;
+	height:702px;
+	z-index: 3;
+}
+
 .article1 {
 	float:left;
 	padding-left:40px;
@@ -12,14 +20,6 @@ body{
 	border-right:1px solid;
 	padding-right:40px;
 	*/
-}
-
-.cigar {
-	position:relative;
-	float:right;
-	border:1px solid;
-	width:100px;
-	height:698px;
 }
 
 .article2 {
