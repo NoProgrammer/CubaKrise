@@ -109,5 +109,5 @@ function checkTime() {
 		setTimeout("checkTime()", 1000);
 	}
 }
-setTimeout("checkTime()", 1000);
+setTimeout("checkTime()", 500);
 
