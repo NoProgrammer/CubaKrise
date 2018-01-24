@@ -74,7 +74,7 @@ function guess(id, guess) {
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
     var element = document.getElementById("progress");
-    element.innerHTML = "Frage " + currentQuestionNumber + " von " + quiz.questions.length + ":";
+    element.innerHTML = currentQuestionNumber + " / " + quiz.questions.length;
 }
 
 var questions = [
@@ -101,7 +101,7 @@ var c_minutes = parseInt(total_seconds/60);
 var c_seconds = parseInt(total_seconds%60);
 
 function checkTime() {
-	document.getElementById("quiz-time-left").innerHTML = 'Zeit übrig: ' + c_minutes + 'm:' + c_seconds + 's';
+	document.getElementById("quiz-time-left").innerHTML = c_minutes + ' ' + c_seconds;
 	if(total_seconds <= 0) {
 		showScore();
 	}
