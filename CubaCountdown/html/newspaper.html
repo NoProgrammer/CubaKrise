@@ -9,6 +9,7 @@
 <link href="../javascript/EaselJS/_assets/css/examples.css" rel="stylesheet" type="text/css"/>
 <script src="../javascript/EaselJS/_assets/js/examples.js"></script>
 <link href="../css/stylesheets/newspaper.css" rel="stylesheet" type="text/css">
+<link href="../css/stylesheets/quiz_seite.css" rel="stylesheet" type="text/css">
 <script src="../javascript/EaselJS/lib/easeljs-NEXT.combined.js"></script>
 </head>
 <body onload="init();">
@@ -202,7 +203,7 @@
 				<h2 id="head_17">ERROR!</h2>
 				<p id="value_17">ERROR!</p>
 				<div style="position:relative; bottom:10px;">
-					<h2 id="head_18" ">ERROR!</h2>
+					<h2 id="head_18">ERROR!</h2>
 					<p id="value_18">ERROR!</p>
 				</div>
 			</div>
@@ -229,15 +230,42 @@
 
 		<!-- PAGE 14 - LAST PAGE -->
 		<div id="p14" style="background-image:url(../media/images/pages/Zeitung_Background_02.png);">
-			<button type="button" class="btn btn-info" id="quizbutton">
-				<a href="quiz_seite.html" class="shake" >Zum Quiz</a>
-			</button>
+
+			<button id="start-quiz" onClick="startQuiz(); setTimeout('checkTime()', 500);">Quiz Starten</button>
+
+			<div class="container-quiz">
+				<div id="quiz">
+					<div class="buttons">
+						
+						<h2 id="question"></h2>
+						<hr class="strich2">
+						<button id="btn0">A</button><span id="choice0"></span><br>
+						<button id="btn1">B</button><span id="choice1"></span><br>
+						<button id="btn2">C</button><span id="choice2"></span><br>
+						<button id="btn3">D</button><span id="choice3"></span>
+						<div class="timer">
+					
+						</div>
+						<div>
+							<p id="progress"></p>
+							<p id="quiz-time-left"></p>
+						</div>
+					</div>
+						
+				</div>
+				
+				
+			</div>
 		</div>
 	
 	</div>
 
 
+
+
 <script type="text/javascript">
+
+	var pageBook = 0;
 
 	$(window).ready(function() {
 		$('#magazine').turn({
@@ -256,14 +284,21 @@
 
 	$(window).bind('keydown', function(e){
 
-		if (e.keyCode==37)
+		if (e.keyCode==37) {
 			$('#magazine').turn('previous');
-		else if (e.keyCode==39)
+			pageBook--;
+			if(pageBook <= 0) { pageBook = 0; }
+		}
+		else if (e.keyCode==39) {
 			$('#magazine').turn('next');
-
+			pageBook++;
+			if(pageBook >= 7) { pageBook = 7; }
+		}
 	});
 
 </script>
+
+<script src="../javascript/quiz_seite.js"></script>
 
 <script id="editable">
 	var stage;

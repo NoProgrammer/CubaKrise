@@ -112,5 +112,10 @@ function checkTime() {
 		setTimeout("checkTime()", 1000);
 	}
 }
-setTimeout("checkTime()", 500);
 
+
+
+function startQuiz() {
+    document.getElementById("start-quiz").style.display = "none";
+    document.getElementById("quiz").style.display = "block";
+}

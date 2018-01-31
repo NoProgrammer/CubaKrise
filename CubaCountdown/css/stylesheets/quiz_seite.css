@@ -1,11 +1,10 @@
 body { font-family: Verdana, Geneva, Tahoma, sans-serif;}
 
 .buttons {
-    margin-left:250px;
+    margin-left:20px;
 }
 
 #question {
-    margin-left:20px;
     font-weight:normal;
 }
 
@@ -21,24 +20,13 @@ button {
     margin-top:40px;
 }
 
-nav {
-    position:absolute;
-    top:0;
-    bottom:0;
-    float:left;
-    border:1px solid;
-    color:black;
-    margin:0px;
-    width:200px;
-    text-align:center;
-}
 
-.strich { margin-left:10%; margin-right:10%; }
+.strich { margin-right:10%; }
 .strich2 { margin-right:10%; }
 
-#headline { margin-left:250px; }
+#headline {  }
 
-#score { margin-left:250px; font-weight: normal; }
+#score { font-weight: normal; }
 
 .timer { margin-top:30px; }
 
@@ -52,6 +40,5 @@ footer { margin-right:10%; }
 
 #progress {
     margin-top:8%;
-    margin-left:45%;
     font-size: 14px;
 }
