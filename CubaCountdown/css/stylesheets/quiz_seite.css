@@ -42,3 +42,14 @@ footer { margin-right:10%; }
     margin-top:8%;
     font-size: 14px;
 }
+
+img { 
+    margin-top:10px;
+    margin-left:1%;
+}
+
+span { 
+    position:relative; 
+    bottom:25px; 
+    margin-left:0%; 
+}
