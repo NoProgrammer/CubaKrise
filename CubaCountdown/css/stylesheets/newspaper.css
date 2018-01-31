@@ -1,5 +1,8 @@
-body{
-	background:#ccc;
+body {
+	background-image: url("../../media/images/background.jpg");
+	background-repeat: no-repeat no-repeat;
+	background-size:100%;
+	background-position:center;
 }
 
 .cigar {

@@ -53,3 +53,17 @@ span {
     bottom:25px; 
     margin-left:0%; 
 }
+
+.noimg {
+    width:20%;
+    height:20%;
+}
+
+#start-quiz {
+    width:120px;
+    height:70px;   
+}
+
+#lab {
+    text-align: center;
+}
