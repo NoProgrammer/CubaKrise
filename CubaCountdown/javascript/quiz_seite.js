@@ -59,12 +59,12 @@ function populate() {
 function showScore() {
     var gameOverHtml = "<h1 id='headline'>Punkteanzahl</h1>";
     if(quiz.score == 0) { gameOverHtml += "<h2 id='score'>Du hast keine Frage richtig beantwortet. Es wäre besser, wenn du wieder lernen würdest! :)</h2>"}
-    else if(quiz.score == 1) { gameOverHtml += "<h2 id='score'>Du hast " + quiz.score + " Frage von 10 richtig beantwortet.</h2>"; }
-    else { gameOverHtml += "<h2 id='score'>Du hast " + quiz.score + " Fragen von 10 richtig beantwortet.</h2>"; }
+    else if(quiz.score == 1) { gameOverHtml += "<h2 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h2>"; }
+    else { gameOverHtml += "<h2 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h2>"; }
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHtml;
 
-    
+
 }
 
 function guess(id, guess) {
@@ -105,7 +105,7 @@ var c_minutes = parseInt(total_seconds/60);
 var c_seconds = parseInt(total_seconds%60);
 
 function checkTime() {
-	document.getElementById("quiz-time-left").innerHTML = c_minutes + ' ' + c_seconds;
+	document.getElementById("quiz-time-left").innerHTML = c_minutes + ':' + c_seconds;
 	if(total_seconds <= 0) {
 		showScore();
 	}

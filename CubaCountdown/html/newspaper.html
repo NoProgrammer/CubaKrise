@@ -235,7 +235,7 @@
 				<h2>Abschlussquiz</h2>
 				<hr class="strich2">
 				<p class="introduction">Wenn Sie das Quiz starten haben Sie zwei Minuten Zeit 10 Fragen zu beantworten. Bei falschen Antworten wird Ihnen 10 Sekunden vom Countdown abgezogen.</p>
-				<img id="start-quiz" onClick="startQuiz(); setTimeout('checkTime()', 500);" src="../media/images/quiz/knopf.png">
+				<img id="start-quiz" onClick="startQuiz(); setTimeout('checkTime()', 1);" src="../media/images/quiz/knopf.png">
 				<br>
 				<p class="lab">Quiz Starten</p>
 			</div>
@@ -249,14 +249,16 @@
 						<img id="btn0" class="noimg" src="../media/images/quiz/knopf.png"><span id="choice0"></span><br>
 						<img id="btn1" class="noimg" src="../media/images/quiz/knopf.png"><span id="choice1"></span><br>
 						<img id="btn2" class="noimg" src="../media/images/quiz/knopf.png"><span id="choice2"></span><br>
-						<img id="btn3" class="noimg" src="../media/images/quiz/knopf.png"><span id="choice3"></span>
-						<img src="../media/images/bomb.svg">
+						<img id="btn3" class="noimg" src="../media/images/quiz/knopf.png"><span id="choice3"></span><br>
 						<div class="timer">
 							
 						</div>
 						<div>
 							<p id="progress"></p>
-							<p id="quiz-time-left"></p>
+							<div class="bomb-timer">
+								<img src="../media/images/bomb.png" id="bomb">
+								<p id="quiz-time-left"></p>
+							</div>
 						</div>
 					</div>
 						

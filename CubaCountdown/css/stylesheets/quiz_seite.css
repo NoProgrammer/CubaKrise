@@ -18,11 +18,8 @@ button {
     margin-top:40px;
 }
 
-
 .strich { margin-right:10px; }
-.strich2 { margin-right:20px; }
-
-#headline {  }
+.strich2 { margin-right:20px; margin-left:20px; }
 
 #score { font-weight: normal; }
 
@@ -34,6 +31,16 @@ footer { margin-right:10%; }
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
+    color:red;
+    position:relative;
+    bottom:145px;
+    left:70px;
+    background-color:black;
+    width:42px;
+    padding-left:5px;
+    padding-right:5px;
+    text-align:center;
+    border-radius:5px;
 }
 
 #progress {
@@ -53,6 +60,12 @@ span {
     margin-left:30px;
 }
 
+#progress {
+    position:relative;
+    margin-left:12px;
+    font-weight:bold;
+}
+
 .noimg {
     width:10%;
     height:10%;
@@ -68,6 +81,18 @@ span {
 }
 
 .introduction {
-    margin-left:20%;
-    margin-right:20%;
+    position:relative;
+    top:10px;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+#bomb {
+    width:180px;
+    height:180px;
+}
+
+.bomb-timer {
+    position:absolute;
+    right:0;
 }
