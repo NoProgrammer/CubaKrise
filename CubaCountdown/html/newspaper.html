@@ -231,8 +231,11 @@
 		<!-- PAGE 14 - LAST PAGE -->
 		<div id="p14" style="background-image:url(../media/images/pages/Zeitung_Background_02.png);">
 
-			<img id="start-quiz" onClick="startQuiz(); setTimeout('checkTime()', 500);" src="../media/images/quiz/knopf.png"><br>
-			<p id="lab">Quiz Starten</p>
+			<div id="before-quiz">
+				<img id="start-quiz" onClick="startQuiz(); setTimeout('checkTime()', 500);" src="../media/images/quiz/knopf.png">
+				<br>
+				<p id="lab">Quiz Starten</p>
+			</div>
 
 			<div class="container-quiz">
 				<div id="quiz">
@@ -244,8 +247,9 @@
 						<img id="btn1" class="noimg" src="../media/images/quiz/knopf.png"><span id="choice1"></span><br>
 						<img id="btn2" class="noimg" src="../media/images/quiz/knopf.png"><span id="choice2"></span><br>
 						<img id="btn3" class="noimg" src="../media/images/quiz/knopf.png"><span id="choice3"></span>
+						<img src="../media/images/bomb.svg">
 						<div class="timer">
-					
+							
 						</div>
 						<div>
 							<p id="progress"></p>

@@ -5,6 +5,11 @@ body {
 	background-position:center;
 }
 
+#before-quiz {
+	position:relative;
+	top:40%;
+}
+
 .cigar {
 	position:absolute;
 	left:1170px;
@@ -92,7 +97,7 @@ footer {
 	text-align: center;
 }
 
-#start-quiz { margin-left:40%; }
+#start-quiz { margin-left:45%; }
 
 #quiz { display:none; }
 

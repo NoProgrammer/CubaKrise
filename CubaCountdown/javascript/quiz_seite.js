@@ -58,9 +58,13 @@ function populate() {
 
 function showScore() {
     var gameOverHtml = "<h1 id='headline'>Punkteanzahl</h1>";
-    gameOverHtml += "<h2 id='score'>Dein Ergebnis: " + quiz.score + "</h2>";
+    if(quiz.score == 0) { gameOverHtml += "<h2 id='score'>Du hast keine Frage richtig beantwortet. Es wäre besser, wenn du wieder lernen würdest! :)</h2>"}
+    else if(quiz.score == 1) { gameOverHtml += "<h2 id='score'>Du hast " + quiz.score + " Frage von 10 richtig beantwortet.</h2>"; }
+    else { gameOverHtml += "<h2 id='score'>Du hast " + quiz.score + " Fragen von 10 richtig beantwortet.</h2>"; }
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHtml;
+
+    
 }
 
 function guess(id, guess) {
@@ -116,6 +120,6 @@ function checkTime() {
 
 
 function startQuiz() {
-    document.getElementById("start-quiz").style.display = "none";
+    document.getElementById("before-quiz").style.display = "none";
     document.getElementById("quiz").style.display = "block";
 }
