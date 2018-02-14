@@ -63,6 +63,11 @@ span {
     height:60px;
 }
 
-#lab {
+.lab {
     text-align: center;
+}
+
+.introduction {
+    margin-left:20%;
+    margin-right:20%;
 }
