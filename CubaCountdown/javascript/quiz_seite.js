@@ -57,10 +57,12 @@ function populate() {
 }
 
 function showScore() {
-    var gameOverHtml = "<h1 id='headline'>Punkteanzahl</h1>";
-    if(quiz.score == 0) { gameOverHtml += "<h2 id='score'>Du hast keine Frage richtig beantwortet. Es wäre besser, wenn du wieder lernen würdest! :)</h2>"}
-    else if(quiz.score == 1) { gameOverHtml += "<h2 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h2>"; }
-    else { gameOverHtml += "<h2 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h2>"; }
+    var gameOverHtml = "<h2 id='headline'>Punkteanzahl</h2> <hr class='strich2'>";
+    if(quiz.score == 0) { gameOverHtml += "<h3 id='score'>Du hast keine Frage richtig beantwortet. Es wäre besser, wenn du wieder lernen würdest! :)</h3>"}
+    else if(quiz.score == 1) { gameOverHtml += "<h3 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h3>"; }
+    else if(quiz.score >= 2 && quiz.score <= 9) { gameOverHtml += "<h3 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h3>"; }
+    else if(quiz.score == 10) { gameOverHtml += "<h3 id='score'>Gratulation! Sie haben alle Fragen richtig beantwortet.</h3>" }
+    gameOverHtml += "";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHtml;
 
