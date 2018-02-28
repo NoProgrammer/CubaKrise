@@ -17,6 +17,12 @@ body {
 
 .whitein {
 	background-color: white;
+	margin:0;
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	bottom:0;
+  	right:0;
 	z-index: 100;
 	opacity: 0;
 	-webkit-transition: opacity 6s ease-in;
