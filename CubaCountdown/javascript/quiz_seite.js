@@ -56,13 +56,15 @@ function populate() {
     }
 }
 
+var gameOverHtml;
+
 function showScore() {
-    var gameOverHtml = "<h2 id='headline'>Punkteanzahl</h2> <hr class='strich2'>";
-    if(quiz.score == 0) { gameOverHtml += "<h3 id='score'>Du hast keine Frage richtig beantwortet. Es wäre besser, wenn du wieder lernen würdest! :)</h3>"}
+    gameOverHtml = "<h2 id='headline'>Punkteanzahl</h2> <hr class='strich2'>";
+    if(quiz.score == 0) { gameOverHtml += "<h3 id='score'>Du hast keine Frage richtig beantwortet. Es wäre besser, wenn du wieder lernen würdest!</h3>"}
     else if(quiz.score == 1) { gameOverHtml += "<h3 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h3>"; }
-    else if(quiz.score >= 2 && quiz.score <= 9) { gameOverHtml += "<h3 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h3>"; }
+    else if(quiz.score >= 2 && quiz.score <= 7) { gameOverHtml += "<h3 id='score'>Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h3>"; }
+    else if(quiz.score >= 8 && quiz.score <= 9) { gameOverHtml += "<h3 id='score'>Gratulation, fast alle Fragen wurden richtig beantwortet. Du hast " + quiz.score + " von 10 Fragen richtig beantwortet.</h3>"; } 
     else if(quiz.score == 10) { gameOverHtml += "<h3 id='score'>Gratulation! Sie haben alle Fragen richtig beantwortet.</h3>" }
-    gameOverHtml += "";
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHtml;
 
@@ -108,11 +110,12 @@ populate();
 
 /* Timer Controls */
 
-var total_seconds = 2*2;
+var total_seconds = 20*2;
 var c_minutes = parseInt(total_seconds/60);
 var c_seconds = parseInt(total_seconds%60);
 
 function checkTime() {
+
 	document.getElementById("quiz-time-left").innerHTML = c_minutes + ':' + c_seconds;
 	if(total_seconds <= 0) {
         explosion();
@@ -125,8 +128,6 @@ function checkTime() {
 		setTimeout("checkTime()", 1000);
 	}
 }
-
-
 
 function startQuiz() {
     document.getElementById("before-quiz").style.display = "none";
