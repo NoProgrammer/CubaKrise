@@ -83,6 +83,12 @@ function showProgress() {
     element.innerHTML = currentQuestionNumber + " / " + quiz.questions.length;
 }
 
+function explosion() {
+    document.getElementById("expl").style.display='block';
+    document.getElementById("expl").classList.add('whitein');
+    setTimeout("document.getElementById('expl').style.display='none'", 6000);
+}
+
 var questions = [
     new question("Wann hat die Kubakrise begonnen?", ["16.Oktober 1962", "19.Oktober 1962", "28.Oktober 1962", "14.Oktober 1962"], "16.Oktober 1962"),
     new question("Wann hat die Kubakrise geendet?", ["28.Oktober 1962", "20.Oktober 1962", "26.Oktober 1962", "2.November 1962"], "28.Oktober 1962"),
@@ -102,13 +108,14 @@ populate();
 
 /* Timer Controls */
 
-var total_seconds = 60*2;
+var total_seconds = 2*2;
 var c_minutes = parseInt(total_seconds/60);
 var c_seconds = parseInt(total_seconds%60);
 
 function checkTime() {
 	document.getElementById("quiz-time-left").innerHTML = c_minutes + ':' + c_seconds;
 	if(total_seconds <= 0) {
+        explosion();
 		showScore();
 	}
 	else {
