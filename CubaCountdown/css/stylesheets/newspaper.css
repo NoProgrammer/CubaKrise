@@ -39,7 +39,7 @@ body {
 
 .cigar {
 	position:absolute;
-	left:1170px;
+	right:0;
 	width:100px;
 	height:702px;
 	z-index: 3;
@@ -174,3 +174,5 @@ audio {
 .head_through {
 	text-align:center;
 }
+
+@media screen and (min-width:1360px) { #magazine { margin-left:auto; margin-right:auto; } }
