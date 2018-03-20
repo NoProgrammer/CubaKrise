@@ -17,7 +17,7 @@
 	</div>
 
 	<div class="cigar">
-		Cigar here!
+		<img src="../media/images/ashtray.png" class="ashtray">
 	</div>
 	
 	<div id="magazine">
@@ -30,7 +30,8 @@
 				<img src="../media/images/during/i_newspaper_front.jpg" class="title_pic">
 			</section>
 			<footer>
-				<h5>Ein E-Learning Projekt der 5AI über die Kubakrise</h5>
+				<h4>Ein E-Learning Projekt der 5AI über die Kubakrise</h4>
+				<h5>Um die Seite zu wechseln, drücken Sie die Pfeiltasten oder bewegen die Maus zu einer Ecke, um zu blättern.</h5>
 			</footer>
 		</div>
 
@@ -275,9 +276,12 @@
 	$(window).ready(function() {
 		$('#magazine').turn({
 							display: 'double',
-							acceleration: true,
-							gradients: !$.isTouch,
+							acceleration: false,
+							gradients:false,
+							duration: 1000,
+							autoCenter: true,
 							elevation:0,
+							autoCenter:true,
 							when: {
 								turned: function(e, page) {
 									/*console.log('Current view: ', $(this).turn('view'));*/

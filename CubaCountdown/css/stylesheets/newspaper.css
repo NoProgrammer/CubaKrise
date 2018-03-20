@@ -1,8 +1,13 @@
 body {
-	background-image: url("../../media/images/background.jpg");
-	background-repeat: no-repeat no-repeat;
-	background-size:100%;
-	background-position:center;
+	background: url("../../media/images/background.jpg") no-repeat center center fixed;
+    background-size:cover;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;    
+	-o-background-size: cover;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 .whiteout {
@@ -86,14 +91,18 @@ body {
 }
 
 #magazine{
+	margin:0 auto;
 	width:1152px;
 	height:700px;
 	font-family: 'Playfair Display', serif;
+	position:relative;
 }
+
 #magazine .turn-page{
 	background-color:#ccc;
 	background-size:100% 100%;
 }
+
 h1, h2, h5{
 	text-align: center;
 
@@ -175,4 +184,7 @@ audio {
 	text-align:center;
 }
 
-@media screen and (min-width:1360px) { #magazine { margin-left:auto; margin-right:auto; } }
+@media screen and (min-width:1360px) { 
+	#magazine { margin-left:auto; margin-right:auto; } 
+}
+@media screen and (min-width:0px) and (max-width:1360px) { #magazine { margin-left:0; margin-right:auto; } }
