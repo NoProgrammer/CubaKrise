@@ -4,6 +4,7 @@ body {
     -webkit-background-size: cover; 
     -moz-background-size: cover;    
 	-o-background-size: cover;
+	overflow-x: hidden;
 }
 
 ::-webkit-scrollbar { 
@@ -183,7 +184,7 @@ audio {
 	position:relative;
 	right:340px;
 	bottom:280px;
-	transform:rotate(40deg);
+	transform:rotate(41deg);
 }
 
 .ashtray {
@@ -203,10 +204,9 @@ audio {
 	z-index: 3;
 }
 
-@media screen and (min-width:1360px) { 
+@media screen and (min-width:1440px) { 
 	#magazine { margin-left:auto; margin-right:auto; }
 	@media screen and (min-height:800px) { #magazine { position:absolute; top:50%; }  }
 }
 
-@media screen and (max-width:1440px) { .cigar { right:0px; } .gif { width:700px; bottom:240px; right:315px; } .ashtray { width:100px; } }
-@media screen and (min-width:0px) and (max-width:1360px) { #magazine { margin-left:0; margin-right:auto; } }
+@media screen and (max-width:1440px) { #magazine { margin-left:0; margin-right:auto; } .cigar { right:0px; } .gif { width:700px; bottom:240px; right:315px; } .ashtray { width:100px; } }
