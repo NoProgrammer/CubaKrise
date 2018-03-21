@@ -206,7 +206,6 @@ audio {
 
 @media screen and (min-width:1440px) { 
 	#magazine { margin-left:auto; margin-right:auto; }
-	@media screen and (min-height:800px) { #magazine { position:absolute; top:50%; }  }
 }
 
 @media screen and (max-width:1440px) { #magazine { margin-left:0; margin-right:auto; } .cigar { right:0px; } .gif { width:700px; bottom:240px; right:315px; } .ashtray { width:100px; } }
