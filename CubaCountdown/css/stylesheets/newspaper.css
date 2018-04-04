@@ -184,16 +184,18 @@ audio {
 	position:relative;
 	right:340px;
 	bottom:280px;
-	transform:rotate(41deg);
+	transform:rotate(48deg);
 }
 
 .ashtray {
+	position:relative;
+	left:3px;
 	width:150px;
 }
 
 .cigar {
 	position:relative;
-	right:50px;
+	right:53px;
 }
 
 .container {
